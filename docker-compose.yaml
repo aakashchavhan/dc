@@ -1,0 +1,15 @@
+version: '3'
+services:
+	service-one:
+		image: 'tomcat:9.0.68-jre8-temurin-jammy'
+		ports:
+		- "8090:8080"
+		volumes:
+		- "/mnt/jenkins-slave1:/usr/local/tomcat/webapps/"
+
+	service-two:
+		image: 'tomcat:9.0.68-jre8-temurin-jammy'
+		ports:
+		- "9090:8080"
+		volumes:
+		- "/mnt/jenkins-slave1:/usr/local/tomcat/webapps/"
